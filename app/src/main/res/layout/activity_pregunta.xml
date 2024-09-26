@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvSaludo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Hola!"
+        android:textColor="#673AB7"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+
+    <TextView
+        android:id="@+id/tvPregunta"
+        android:layout_width="304dp"
+        android:layout_height="48dp"
+        android:text="¿Quien es este pokemon?"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rgOpciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="194dp"
+        android:layout_height="206dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPregunta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.362"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666"
+        app:srcCompat="@drawable/dratini" />
+
+    <RadioGroup
+        android:id="@+id/rgOpciones"
+        android:layout_width="288dp"
+        android:layout_height="179dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btnResponder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbOpcion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gyarados" />
+
+        <RadioButton
+            android:id="@+id/rbOpcion2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dratini" />
+
+        <RadioButton
+            android:id="@+id/rbOpcion3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ekans" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnResponder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
